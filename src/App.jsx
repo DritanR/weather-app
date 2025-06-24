@@ -1,14 +1,19 @@
 import './App.css'
-import SearchBar from './components/SearchBar'
-import WeatherCard from './components/WeatherCard'
 import { WeatherProvider } from './context/WeatherContext'
+import Weather from './pages/Weather'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <WeatherProvider>
-    <SearchBar />
-    <WeatherCard />
-    </WeatherProvider>
+    <Router>
+      <div className='w-full h-full relative'>
+        <WeatherProvider>
+          <Routes>
+          <Route path='/' element={<Weather />} />
+          </Routes>
+        </WeatherProvider>
+      </div>
+    </Router>
   )
 }
 

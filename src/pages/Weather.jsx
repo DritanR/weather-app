@@ -1,7 +1,11 @@
-function Weather () {
+import SearchBar from '../components/SearchBar'
+import WeatherCard from '../components/WeatherCard'
+
+function Weather() {
     return (
         <>
-        <h1>Hi</h1>
+            <SearchBar />
+            <WeatherCard />
         </>
     )
 }

@@ -4,6 +4,7 @@ import { WeatherContext } from '../context/WeatherContext';
 function SearchBar () {
     const {location, setLocation, searchLocation} = useContext(WeatherContext)
     return (
+        <div className='text-center p-4'>
         <input 
         type="text"
         placeholder="Enter location"
@@ -12,6 +13,7 @@ function SearchBar () {
         onChange={(event) => setLocation(event.target.value)}
         onKeyDownCapture={searchLocation}
         />
+        </div>
     )
 }
 

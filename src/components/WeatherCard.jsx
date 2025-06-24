@@ -1,12 +1,12 @@
 import { useContext } from 'react';
 import { WeatherContext } from '../context/WeatherContext';
 
-function WeatherCard () {
-    const {data} = useContext(WeatherContext)
-    
+function WeatherCard() {
+    const { data } = useContext(WeatherContext)
+
     return (
         <div>
-            {data.weather?(
+            {data.weather ? (
                 <div className='w-[500px] h-[250px] bg-gray-300 shadow-lg rounded-xl m-auto relative px-6 top-[10%]'>
                     <div className='flex justify-between w-full'>
                         <div className='w-1/2 my-4 mx-auto flex justify-between items-center'>
@@ -29,7 +29,7 @@ function WeatherCard () {
 
                         <div className='w-1/2 flex flex-col justify-between items-end'>
                             <div className='relative'>
-                                <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt="" className='w-[120px]'/>
+                                <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt="" className='w-[120px]' />
                             </div>
 
                             {data.name !== undefined ? (
@@ -40,28 +40,28 @@ function WeatherCard () {
                                             {data.main.feels_like.toFixed()} °C
                                         </p>
                                     </div>
-                                                                        <div className='flex justify-between gap-x-8'>
+                                    <div className='flex justify-between gap-x-8'>
                                         <p>Humidity</p>
                                         <p className='font-bold w-20'>
                                             {data.main.humidity} %
                                         </p>
                                     </div>
 
-                                                                        <div className='flex justify-between gap-x-8'>
+                                    <div className='flex justify-between gap-x-8'>
                                         <p>Wind Speed</p>
                                         <p className='font-bold w-20'>
                                             {data.wind.speed.toFixed()} KPH
                                         </p>
                                     </div>
 
-                                                                        <div className='flex justify-between gap-x-8'>
+                                    <div className='flex justify-between gap-x-8'>
                                         <p>Pressure</p>
                                         <p className='font-bold w-20'>
                                             {data.main.pressure} hPa
                                         </p>
                                     </div>
                                 </div>
-                            ): null}
+                            ) : null}
                         </div>
                     </div>
                 </div>
