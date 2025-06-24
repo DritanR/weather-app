@@ -14,7 +14,7 @@ export const WeatherProvider = ({children}) => {
             axios.get(URL)
             .then((response) => {
                 setData(response.data)
-                
+                console.log(response.data)
             })
             setLocation("")
         }
