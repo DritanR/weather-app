@@ -1,6 +1,8 @@
 function Weather () {
     return (
-        <></>
+        <>
+        <h1>Hi</h1>
+        </>
     )
 }
 

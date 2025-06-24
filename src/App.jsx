@@ -1,10 +1,12 @@
 import './App.css'
+import SearchBar from './components/SearchBar'
+import { WeatherProvider } from './context/WeatherContext'
 
 function App() {
   return (
-    <div>
-      
-    </div>
+    <WeatherProvider>
+    <SearchBar />
+    </WeatherProvider>
   )
 }
 
