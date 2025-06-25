@@ -1,8 +1,8 @@
-function About() {
+function About({appName}) {
 
   return (
     <div className="p-8 max-w-3xl mx-auto text-gray-800">
-      <h1 className="text-4xl font-bold mb-4">Weather App – About</h1>
+      <h1 className="text-4xl font-bold mb-4">{appName} – About</h1>
 
       <p className="mb-4">
         Want to know more about OpenWeatherMap API? Click Learn More to find out!
@@ -15,9 +15,9 @@ function About() {
         Learn More
       </a>
 
-<div className="max-w-3xl mx-auto p-6 bg-white bg-opacity-90 rounded-lg shadow-md text-gray-800 leading-7 text-lg">
+<div className="max-w-3xl mx-auto p-6 bg-gray-100 mt-4 bg-opacity-90 rounded-lg shadow-md text-gray-800 leading-7 text-lg">
   <p>
-    <span className="font-semibold text-blue-600">Weather App</span> is a simple and user-friendly tool that provides detailed and up-to-date weather information for any city in the world.
+    <span className="font-semibold text-blue-600">{appName}</span> is a simple and user-friendly tool that provides detailed and up-to-date weather information for any city in the world.
     When a user searches for a location, the app displays key weather data including the current sky conditions (such as clear, cloudy, or rainy),
     the actual temperature, and how the temperature feels.
   </p>
@@ -29,7 +29,7 @@ function About() {
     and the atmospheric pressure measured in hectopascals (hPa).
     These details help users stay informed about the weather so they can plan their day accordingly.
     Whether you're checking the conditions in your own city or exploring the climate in another part of the world,
-    <span className="font-semibold text-blue-600"> Weather App</span> gives you a quick and accurate snapshot of the current environment.
+    <span className="font-semibold text-blue-600">{appName}</span> gives you a quick and accurate snapshot of the current environment.
   </p>
 </div>
 

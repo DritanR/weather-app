@@ -3,8 +3,7 @@ import WeatherCard from '../components/WeatherCard'
 
 function Weather() {
     return (
-        <div 
-        className='w-full h-full relative'
+        <div className='w-full h-full relative'
         >
             <SearchBar />
             <WeatherCard />

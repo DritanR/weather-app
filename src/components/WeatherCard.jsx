@@ -1,8 +1,14 @@
-import { useContext } from 'react';
+import { useContext, useMemo } from 'react';
 import { WeatherContext } from '../context/WeatherContext';
 
 function WeatherCard() {
     const { data } = useContext(WeatherContext)
+
+    const formattedTemp = useMemo(() => {
+        if (!data.main || typeof data.main.temp !== 'number') return ""
+
+        return `${Math.round(data.main.temp)} °C`
+    }, [data.main?.temp])
 
     return (
         <div>
@@ -22,7 +28,7 @@ function WeatherCard() {
                                 </div>
 
                                 <div>
-                                    <h1 className='text-6xl font-semibold'>{data.main.temp.toFixed()} °C</h1>
+                                    <h1 className='text-6xl font-semibold'>{formattedTemp}</h1>
                                 </div>
                             </div>
                         </div>
