@@ -1,6 +1,5 @@
 import {createContext, useState} from 'react'
 import axios from "axios";
-import WeatherCard from '../components/WeatherCard';
 
 export const WeatherContext = createContext()
 
